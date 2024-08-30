@@ -1,5 +1,5 @@
-import H1 from "@/components/typography/H1";
-import Paragraph from "@/components/typography/Paragraph";
+import { H1, Paragraph } from "@/components/typography/Typography";
+
 
 
 export default function Mobile() {

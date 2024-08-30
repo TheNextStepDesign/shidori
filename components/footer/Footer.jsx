@@ -2,7 +2,8 @@ import { Stack } from "../layout/Stacks";
 import { LogoFooter } from "../navbar/Logo";
 import { FooterItemsWeb } from "../navbar/Navitems";
 import { SocialFooter } from "../navbar/Social";
-import Base from "../typography/Base";
+import { Base } from "../typography/Typography";
+
 
 
 export default function Footer() {

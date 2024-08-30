@@ -3,7 +3,8 @@ import Featured from "@/components/landing/fetured/Featured";
 import HeroBanner from "@/components/landing/heroBanner/HeroBanner";
 import HeroContent from "@/components/landing/heroContent/HeroContent";
 import Testimonial from "@/components/landing/testimonial/Testimonial";
-import Spacing from "@/components/typography/Spacing";
+import Spacing from "@/components/layout/Spacing";
+
 
 
 export const metadata = {

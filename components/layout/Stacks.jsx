@@ -23,3 +23,11 @@ export function Stack({className,children}){
       </div>
     )
 }
+
+export function Center({className,children}){
+  return (
+      <div className={cn('flex justify-center items-center',className)} >
+        {children}
+      </div>
+    )
+}

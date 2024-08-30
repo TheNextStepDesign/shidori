@@ -1,23 +1,24 @@
 import Image from 'next/image'
 import logoIconNav from './icons/logo.svg'
 import logoIconFooter from './icons/logofooter.svg'
+import Link from 'next/link'
 
 export  function LogoNav() {
   return (
-    <div className='' >
+    <Link href={'/'} >
       <Image 
         src={logoIconNav} 
         alt="Logo Icon" 
         className='w-24 md:w-full'
       />
-    </div>
+    </Link>
   )
 }
 
 export  function LogoFooter(){
   return (
-    <div  >
+    <Link href={'/'} >
       <Image src={logoIconFooter} alt="logo Icon" className='w-[140px] md:w-full' />
-    </div>
+    </Link>
   )
 }

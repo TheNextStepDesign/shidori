@@ -56,12 +56,12 @@ export default function Testimonial() {
 
     {/* indicator-web */}
       
-    <div className="hidden md:block py-2 text-center text-sm text-muted-foreground ">
+    <div className="hidden md:block md:py-2 md:text-center md:text-sm">
         
         {Array.from({ length: count }).map((_, index) => (
           <button
             key={index}
-            className={`h-2 w-2 rounded-full cursor-default ml-2 ${current - 1 === index ? "bg-accent" : "bg-gray-200"} `}
+            className={`md:h-2 md:w-2 md:rounded-full md:cursor-default md:ml-2 ${current - 1 === index ? "md:bg-accent" : "md:bg-gray-200"} `}
           />
         ))}
 
@@ -69,7 +69,7 @@ export default function Testimonial() {
 
     {/* indicator-mobile */}
 
-    <div className=" md:hidden py-2 text-center text-sm text-muted-foreground ">
+    <div className="block md:hidden py-2 text-center text-sm">
         
         {Array.from({ length: count+1 }).map((_, index) => (
           <button

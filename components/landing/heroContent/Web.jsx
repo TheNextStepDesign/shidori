@@ -1,7 +1,5 @@
-
-import H2 from '@/components/typography/H2'
+import { H2, Paragraph } from '@/components/typography/Typography'
 import poitionIcon from './icon/poition.svg'
-import Paragraph from '@/components/typography/Paragraph'
 import Image from 'next/image'
 
 export default function Web() {

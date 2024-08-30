@@ -1,11 +1,24 @@
-import Base from "../typography/Base";
+import { Base } from "../typography/Typography";
 
 export default function MovingText() {
+  const text = "home-made | pure-veg | wholesome | yummy | ";
+  
   return (
-    <div className="bg-accent" >
-      <Base  className={'truncate'} >
-      home-made | pure-veg | wholesome | yummy | home-made | pure-veg | wholesome | yummy | home-made | pure-veg | wholesome | yummy | home-made | pure-veg
-      </Base>
+    <div className="bg-accent overflow-hidden whitespace-nowrap">
+      <div className="inline-block animate-marquee">
+        {[...Array(20)].map((_, index) => (
+          <Base key={index} className="inline-block">
+            {text}
+          </Base>
+        ))}
+      </div>
+      <div className="inline-block animate-marquee2">
+        {[...Array(20)].map((_, index) => (
+          <Base key={index} className="inline-block">
+            {text}
+          </Base>
+        ))}
+      </div>
     </div>
   )
 }

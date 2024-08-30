@@ -1,6 +1,6 @@
 import { Stack, VStacks } from "@/components/layout/Stacks";
-import H3 from "@/components/typography/H3";
-import Paragraph from "@/components/typography/Paragraph";
+import { H3, Paragraph } from "@/components/typography/Typography";
+
 
 import Image from "next/image";
 

@@ -7,7 +7,7 @@ const items = [
     },
     {
         name:"our story",
-        href:"/"
+        href:"/story"
     },
     {
         name:"contact us",
