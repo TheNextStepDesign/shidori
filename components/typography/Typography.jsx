@@ -27,7 +27,7 @@ export function H3({ className, children }) {
 
 export function Paragraph({ className, children }) {
     return (
-      <p className={cn('text-paragraph font-normal', className)}>{children}</p>
+      <p className={cn('text-paragraph md:text-base font-normal', className)}>{children}</p>
     );
 }
   

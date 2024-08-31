@@ -10,7 +10,7 @@ export default function StoryQuote() {
         const handleScroll = () => {
             if (parallaxRef.current) {
                 const scrolled = window.scrollY;
-                const speed = 0.5; // Adjust this value to change parallax speed
+                const speed = 0.2; // Adjust this value to change parallax speed
                 parallaxRef.current.style.backgroundPositionY = `calc(50% + ${scrolled * speed}px)`;
             }
         };

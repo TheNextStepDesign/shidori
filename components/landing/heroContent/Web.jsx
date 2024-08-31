@@ -6,11 +6,11 @@ export default function Web() {
   return (
     <div className="hidden md:py-5 lg:py-0 md:flex md:flex-row md:items-center md:gap-5" >
         <div>
-            <Image src={poitionIcon} alt="poition-icon" />
+            <Image src={poitionIcon} alt="poition-icon" className='w-[200px]' />
         </div>
         <div className='md:flex md:flex-row md:items-center md:gap-5 ' >
             <H2 className={'w-[75px]'} >
-                made with Love
+                made with love
             </H2>
             <div className='pl-5 border-l border-black' >
                 <Paragraph className={'max-w-[668px]'} >

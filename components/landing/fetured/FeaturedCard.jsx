@@ -7,7 +7,7 @@ export default function FeaturedCard({data}) {
     
         <div className="bg-white rounded-xl flex flex-col md:flex-row md:rounded-3xl " >
         
-            <div className="w-full h-[330px] md:w-1/2 md:h-[670px]" >
+            <div className="w-full h-[330px] md:w-1/2 md:h-[580px]" >
                 <Image src={image} height={330} width={640}  alt="featured-img" className="w-full h-full object-cover rounded-t-xl md:rounded-l-3xl md:rounded-tr-none" />
             </div>
             <div className="w-full md:w-1/2 flex flex-row justify-center items-center relative">

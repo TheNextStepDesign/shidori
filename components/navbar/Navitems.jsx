@@ -6,12 +6,12 @@ const items = [
         href:"/"
     },
     {
-        name:"our story",
-        href:"/story"
+        name:"about",
+        href:"/about"
     },
     {
         name:"contact us",
-        href:"/"
+        href:"/contact"
     }
 ]
 

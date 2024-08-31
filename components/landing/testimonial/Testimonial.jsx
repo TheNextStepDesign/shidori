@@ -10,6 +10,7 @@ import {
     CarouselPrevious,
   } from "@/components/ui/carousel"
 import Body from "@/components/Body";
+import { H1, H2 } from "@/components/typography/Typography";
 
 export default function Testimonial() {
     const [api, setApi] = React.useState();
@@ -30,7 +31,8 @@ export default function Testimonial() {
     }, [api]);
   return (
     <Body>
-        <Carousel
+      <h3  className={'text-white text-h1 font-semibold mb-2.5 text-center md:text-left '} >Our patrons</h3>
+    <Carousel
       opts={{
         align: "start",
       }}
@@ -39,7 +41,7 @@ export default function Testimonial() {
     >
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className="md:basis-1/2">
+          <CarouselItem key={index} className="md:basis-1/3">
 
             <TestimonialCard/>
 
@@ -61,7 +63,7 @@ export default function Testimonial() {
         {Array.from({ length: count }).map((_, index) => (
           <button
             key={index}
-            className={`md:h-2 md:w-2 md:rounded-full md:cursor-default md:ml-2 ${current - 1 === index ? "md:bg-accent" : "md:bg-gray-200"} `}
+            className={`md:h-2 md:w-2 md:rounded-full md:cursor-default md:ml-2 ${current -1 === index ? "md:bg-accent" : "md:bg-gray-200"} `}
           />
         ))}
 

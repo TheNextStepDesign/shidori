@@ -8,7 +8,7 @@ export default function StoryHero() {
     <Body>
         <Stack className={'bg-white p-2.5 gap-5  md:p-5  md:justify-between md:items-center rounded-xl md:rounded-2xl'} >
 
-            <div className='w-full md:max-w-[600px] h-[350px] md:h-[450px] bg-gray-400 rounded-xl' >
+            <div className='w-full md:max-w-[600px] h-[350px] md:h-[400px] bg-gray-400 rounded-xl' >
             {/* Image here */}
             </div>
 

@@ -7,20 +7,21 @@ import xIcon1 from './icons/x1.svg'
 import linkedInIcon1 from './icons/linkedIn1.svg'
 
 import Image from 'next/image';
+import { FacebookIcon, InstagramIcon, WhatsAppIcon } from '../typography/Icons'
 
 const items = [
   {
-    icon:xIcon ,
+    icon:FacebookIcon ,
     icon1:xIcon1 ,
     path: "#",
   },
   {
-    icon: instagramIcon,
+    icon: InstagramIcon,
     icon1: instagramIcon1,
     path: "#",
   },
   {
-    icon: linkedInIcon,
+    icon: WhatsAppIcon,
     icon1: linkedInIcon1,
     path: "#",
   }
@@ -37,7 +38,24 @@ export  function Social() {
             target="blank"
             className="cursor-pointer"
           >
-            <Image src={item.icon} alt="social-icon-navbar" />
+            <item.icon color='white' width="30" height="31" />
+          </a>)
+        }
+    </div>
+  )
+}
+
+export  function SocialContacts() {
+  return (
+    <div className='flex flex-row  gap-8 w-[274px] md:pl-5'>
+        {
+            items.map((item,index)=><a
+            key={index}
+            href={item.path}
+            target="blank"
+            className="cursor-pointer bg-opacity-30 backdrop-blur-lg shadow-lg bg-black p-2 rounded-full"
+          >
+            <item.icon color={'#FBD71C'} width="30" height="31" />
           </a>)
         }
     </div>
@@ -54,7 +72,7 @@ export function SocialFooter() {
             target="blank"
             className="cursor-pointer"
           >
-            <Image src={item.icon1} alt="social-icon-footer" />
+            <item.icon  width="30" height="31" />
           </a>)
         }
     </div>

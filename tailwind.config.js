@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        "base":"18px",
-        'paragraph': '20px', 
+        "base":"16px",
+        'paragraph': '14px', 
         'h3': '20px', 
         'h2': '25px', 
         'h1':"30px"
@@ -25,8 +25,8 @@ module.exports = {
         sans: ['var(--font-poppins)'],
       },
       animation: {
-        marquee: 'marquee 70s linear infinite',
-        marquee2: 'marquee2 70s linear infinite',
+        marquee: 'marquee 90s linear infinite',
+        marquee2: 'marquee2 90s linear infinite',
       },
       keyframes: {
         marquee: {

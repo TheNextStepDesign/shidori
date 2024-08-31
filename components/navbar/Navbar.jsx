@@ -38,7 +38,7 @@ export default function Navbar() {
 
 
   return (
-  <div>
+  <div className='relative z-40' >
 
   <MovingText/>
   <Headroom  onPin={handlePin} onUnpin={handleUnpin}>
