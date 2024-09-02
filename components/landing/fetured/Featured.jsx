@@ -5,8 +5,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 
 import FeaturedCard from "./FeaturedCard";
@@ -16,28 +14,28 @@ const data = [
   {
     title: "Healthy Ladoos",
     description: "Ghee, dry-fruits, jaggery and love!",
-    image: "/images/landing/featured_img.png",
+    image: "/images/landing/products/tumbnails/1.webp",
     button: "View all >",
     ingredients:"Gond and Dates | Mixed Dry fruit | Khapli Wheat"
   },
   {
     title: "Healthy Ladoos",
     description: "Ghee, dry-fruits, jaggery and love!",
-    image: "/images/landing/featured_img.png",
+    image: "/images/landing/products/tumbnails/2.webp",
     button: "View all >",
     ingredients:"Gond and Dates | Mixed Dry fruit | Khapli Wheat"
   },
   {
     title: "Healthy Ladoos",
     description: "Ghee, dry-fruits, jaggery and love!",
-    image: "/images/landing/featured_img.png",
+    image: "/images/landing/products/tumbnails/3.webp",
     button: "View all >",
     ingredients:"Gond and Dates | Mixed Dry fruit | Khapli Wheat"
   },
   {
     title: "Healthy Ladoos",
     description: "Ghee, dry-fruits, jaggery and love!",
-    image: "/images/landing/featured_img.png",
+    image: "/images/landing/products/tumbnails/4.webp",
     button: "View all >",
     ingredients:"Gond and Dates | Mixed Dry fruit | Khapli Wheat"
   },

@@ -4,26 +4,32 @@ import { H3, Paragraph } from "@/components/typography/Typography";
 
 import Image from "next/image";
 
-export default function TestimonialCard() {
+export default function TestimonialCard({data}) {
+    const {name,designation,message,img} = data
+    const paragraphs = message.split("<br/><br/>");
   return (
-    <VStacks className="w-full p-2.5 bg-customgray rounded-xl md:max-w-[600px]" >
+    <VStacks className="w-full p-2.5 bg-customgray rounded-xl md:max-w-[600px] h-full" >
 
-        <Stack className={'gap-2.5 md:items-end'} >
-            <div className="w-[200px]" >
-                <Image width={200} height={200} src="/images/landing/testimonial.png" alt="testimonial-img" className="w-full h-full rounded-xl" />
+        <Stack className={'gap-2.5 md:justify-between md:items-end'} >
+            <div className="w-[200px] h-[200px]" >
+                <Image width={200} height={200} src={img} alt="testimonial-img" className="w-full h-full rounded-xl object-cover" />
             </div>
-            <VStacks className="gap-2.5" >
-                <H3>Manisha Shah</H3>
-                <Paragraph>
-                    CEO, Mom to be, Mumbai
+            <VStacks className="gap-2.5 w-[230px]" >
+                <H3>{name}</H3>
+                
+                <Paragraph >
+                    {designation}
                 </Paragraph>
+            
             </VStacks>
 
         </Stack>
 
-        <Paragraph>
-            llicitudin a libero. Mauris bibendum sit amet erat in rhoncus. Aenean at rhoncus lorem, ac mattis velit. Aliquam sed mattis dolor. Vestibulum ac urna a ex sagittis efficitur. Mauris consequat leo eu lacus pharetra, bibendum fermentum ante ultrices. Vestibulum nec fermentum neque. Nunc ut gravida velit. Nam lobortis turpis sit amet lacinia tincidunt.
-        </Paragraph>
+        {paragraphs.map((paragraph, index) => (
+                    <Paragraph key={index}>
+                        {paragraph}
+                    </Paragraph>
+        ))}
 
     </VStacks>
   )

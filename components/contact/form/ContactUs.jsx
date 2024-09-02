@@ -6,9 +6,8 @@ import Image from "next/image";
 import callIcon from './icons/callIcon.svg';
 import emailIcon from './icons/emailIcon.svg';
 import pinIcon from './icons/pinIcon.svg';
-import { useState } from "react";
 import Body from "@/components/Body";
-import { SocialContacts, SocialFooter } from "@/components/navbar/Social";
+import { SocialContacts } from "@/components/navbar/Social";
 
 
 export default function ContactUs() {
