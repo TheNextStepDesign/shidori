@@ -63,7 +63,7 @@ export default function Testimonial() {
     >
       <CarouselContent>
         {testimonials.map((items, index) => (
-          <CarouselItem key={index} className="md:basis-1/3 h-[550px] md:h-[480px]">
+          <CarouselItem key={index} className="md:basis-1/3 h-[580px] md:h-[480px]">
 
             <TestimonialCard data={items} />
 

@@ -20,16 +20,17 @@ export default function StoryQuote() {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
+
     }, []);
 
   return (
     <div>
-
+        {/* web version */}
         <div 
             ref={parallaxRef} 
-            className="bg-cover bg-center bg-no-repeat bg-fixed  h-[150px] sm:h-[250px] md:h-[350px] relative hidden md:block "
+            className="bg-cover bg-center bg-no-repeat bg-fixed  h-[200px] sm:h-[200px] md:h-[200px] relative  md:block "
             style={{ 
-                backgroundImage: "url('/images/landing/featured_img.png')",
+                backgroundImage: "url('/images/landing/quote.JPG')",
             }}
             >
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -42,10 +43,12 @@ export default function StoryQuote() {
                 </H2>
             </Center>
         </div>
-        <div 
+
+        {/* mob cersion */}
+        {/* <div 
             className="bg-cover bg-center bg-no-repeat h-[200px] max-w-[1200px] relative md:hidden"
             style={{ 
-                backgroundImage: "url('/images/landing/featured_img.png')",
+                backgroundImage: "url('/images/landing/quote.JPG')",
             }}
         >
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -57,7 +60,7 @@ export default function StoryQuote() {
                     xo, Valerie
                 </H2>
             </Center>
-        </div>
+        </div> */}
     </div>
   );
 }

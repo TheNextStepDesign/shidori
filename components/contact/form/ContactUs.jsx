@@ -26,7 +26,7 @@ export default function ContactUs() {
                 
         
                
-                    <Stack className={'relative z-10 px-5 py-5 gap-5 md:py-24 md:px-5 md:items-start md:ustify-between '} >
+                    <Stack className={'relative z-10 px-5 py-5 gap-5 md:gap-0 md:py-24 md:px-5 md:items-start md:justify-between  '} >
             
                         <ContactInfoLabel/>
                         <ContactForm/>
@@ -50,15 +50,15 @@ export default function ContactUs() {
 const data = [
     {
         icon:callIcon,
-        info:"+234 813 999 9999"
+        info:"+91 98226 68020"
     },
     {
         icon:pinIcon,
-        info:"lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
+        info:"KP Food and Products. 2113. E Ward, Behind Akanksha appt.  Nimbalkar Colony. Kawla Naka. Kolhapur, MH 416004"
     },
     {
         icon:emailIcon,
-        info:"shidori@email.com"
+        info:"info@shidori.in"
     }
 ]
 
@@ -66,17 +66,17 @@ function ContactInfoLabel(){
    
 
     return (
-        <VStacks  className={'justify-around  h-[350px]'} >
-            <h1 className=" relative z-10  md:pl-5 text-white text-h1 underline" >
+        <VStacks  className={'relative z-10 justify-around  md:h-[350px]  '} >
+            <h1 className="   md:pl-5 text-white text-h1 underline" >
                 Contact Us
             </h1>
-            <VStacks className={' relative z-10 gap-5 '} >
+            <VStacks className={'gap-5'} >
                 {
-                    data.map((item, index)=>(<Stack key={index} className={'gap-5'} >
-                                <div className="bg-opacity-30 backdrop-blur-lg shadow-lg bg-black w-fit p-2  rounded-full" >
+                    data.map((item, index)=>(<Stack key={index} className={'gap-5'}  >
+                                <div className="bg-opacity-30 backdrop-blur-lg shadow-lg bg-black  p-2 w-fit   rounded-full" >
                                     <Image src={item.icon} alt="icon"   />
                                 </div>
-                                <Paragraph className={'text-white'} >
+                                <Paragraph className={'text-white max-w-[480px]'} >
                                     {item.info}
                                 </Paragraph>
                             </Stack>)

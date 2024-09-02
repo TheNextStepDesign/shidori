@@ -1,31 +1,18 @@
-import instagramIcon from './icons/instagram.svg'
-import xIcon from './icons/x.svg'
-import linkedInIcon from './icons/linkedIn.svg'
-
-import instagramIcon1 from './icons/instagram1.svg'
-import xIcon1 from './icons/x1.svg'
-import linkedInIcon1 from './icons/linkedIn1.svg'
-
-import Image from 'next/image';
 import { FacebookIcon, InstagramIcon, WhatsAppIcon } from '../typography/Icons'
 
 const items = [
   {
     icon:FacebookIcon ,
-    icon1:xIcon1 ,
-    path: "#",
+    path: "https://www.facebook.com/share/RddmC9RLvijuv3bk/?mibextid=qi2Omg",
   },
   {
     icon: InstagramIcon,
-    icon1: instagramIcon1,
-    path: "#",
+    path: "https://www.instagram.com/shidori_bykp?igsh=cHk3b3FkM3VtdTQz",
   },
   {
     icon: WhatsAppIcon,
-    icon1: linkedInIcon1,
-    path: "#",
-  }
-  
+    path: "https://wa.me/919822668020?text=Hii,",
+  } 
 ];
 
 export  function Social() {
@@ -43,7 +30,7 @@ export  function Social() {
         }
     </div>
   )
-}
+};
 
 export  function SocialContacts() {
   return (
@@ -60,7 +47,7 @@ export  function SocialContacts() {
         }
     </div>
   )
-}
+};
 
 export function SocialFooter() {
   return (
