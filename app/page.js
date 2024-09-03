@@ -16,6 +16,7 @@ export default function Home() {
   return (
     <main  >
       <HeroBanner/>
+      <Spacing/>
       <HeroContent/>
       <Spacing/>
       <Featured/>

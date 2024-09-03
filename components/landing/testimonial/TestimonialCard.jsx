@@ -11,10 +11,10 @@ export default function TestimonialCard({data}) {
     <VStacks className="w-full p-2.5 bg-customgray rounded-xl md:max-w-[600px] h-full" >
 
         <Stack className={'gap-2.5 md:justify-between md:items-end'} >
-            <div className="w-[200px] h-[200px]" >
+            <div className="w-full h-[200px]" >
                 <Image width={200} height={200} src={img} alt="testimonial-img" className="w-full h-full rounded-xl object-cover" />
             </div>
-            <VStacks className="gap-2.5 w-[230px]" >
+            <VStacks className="gap-2.5 w-full " >
                 <H3>{name}</H3>
                 
                 <Paragraph >

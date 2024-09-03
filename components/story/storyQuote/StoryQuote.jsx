@@ -36,11 +36,11 @@ export default function StoryQuote() {
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
             <Center className={'relative z-10 h-full flex-col gap-3 sm:gap-5 text-white px-4 sm:px-6 md:px-8'}>
                 <H1 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-                    " You don't need to be gluten-free to love XOV."
+                    "You don’t have to eat less, you just have to eat right."
                 </H1>
-                <H2 className="text-lg sm:text-xl md:text-2xl">
+                {/* <H2 className="text-lg sm:text-xl md:text-2xl">
                     xo, Valerie
-                </H2>
+                </H2> */}
             </Center>
         </div>
 

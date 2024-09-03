@@ -10,7 +10,29 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 
-export default function FeaturedImgCarousel({gallary}) {
+export default function FeaturedImgCarousel({gallary,setIndex}) {
+  const [api, setApi] = React.useState();
+  const [current, setCurrent] = React.useState(0);
+  const [count, setCount] = React.useState(0);
+
+  
+  React.useEffect(()=>{
+    setIndex(current)
+  },[current])
+  
+  React.useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+    
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
 
     const plugin = React.useRef(
         Autoplay({ delay: 3000, stopOnInteraction: false })
@@ -20,6 +42,7 @@ export default function FeaturedImgCarousel({gallary}) {
     <div className="w-full  md:w-1/2">
         <Carousel 
         plugins={[plugin.current]} 
+        setApi={setApi}
        className="">
         <CarouselContent>
           {gallary.map((img, index) => (

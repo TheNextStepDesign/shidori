@@ -166,7 +166,7 @@ const CarouselPrevious = React.forwardRef(({ className, variant = "outline", siz
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}>
-      <Image src={ArrowLeftIcon} className="h-4 w-4" />
+      <Image src={ArrowLeftIcon} alt="CarouselPreviousIcon" className="h-4 w-4" />
       <span className="sr-only">Previous slide</span>
     </Button>)
   );
@@ -187,7 +187,7 @@ const CarouselNext = React.forwardRef(({ className, variant = "outline", size = 
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}>
-      <Image src={ArrowRightIcon} className="h-4 w-4" />
+      <Image src={ArrowRightIcon} className="h-4 w-4" alt="CarouselNextIcon" />
       <span className="sr-only">Next slide</span>
     </Button>)
   );

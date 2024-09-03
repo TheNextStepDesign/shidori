@@ -1,8 +1,4 @@
 import { VStacks } from "@/components/layout/Stacks"
-
-
-
-
 export default function BottomHero() {
     const imgUrl = '/images/landing/bottomHero.png'
   return (

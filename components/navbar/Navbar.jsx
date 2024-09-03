@@ -42,7 +42,7 @@ export default function Navbar() {
 
   <MovingText/>
   <Headroom  onPin={handlePin} onUnpin={handleUnpin}>
-    <div className={`py-2 px-2 md:px-10 text-white  relative bg-opacity-30 backdrop-blur-lg shadow-lg bg-brand`} >
+    <div className={`py-1 px-2 md:px-10 text-white  relative  bg-brand`} >
     
       <div className='flex justify-between items-center'>
           <NavItemsWeb/>
@@ -57,7 +57,7 @@ export default function Navbar() {
       </div>
 
       <div 
-        className={`block md:hidden w-full  bg-brand backdrop-blur-lg opacity-90 shadow-lg left-0 text-white absolute 
+        className={`block md:hidden w-full  bg-accent backdrop-blur-lg opacity-90 shadow-lg left-0 text-brand absolute 
           overflow-hidden transition-all duration-300 ease-in-out 
           origin-top ${toggle ? 'max-h-screen' : 'max-h-0'}`}
       >

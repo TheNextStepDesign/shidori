@@ -35,7 +35,7 @@ const testimonials = [
     {
         name:"Saroj Shinde",
         img:"/images/landing/testimonial5.jpeg",
-        designation:"",
+        designation:"Janani Hospital, Kolhapur",
         message:`KP products are genuinely authentic and incredibly delicious. Made with the finest ingredients, they offer a perfect blend of taste and nutrition. Whether it’s their wholesome dry fruits or nutritious Khapli wheat laddus, each product reflects a commitment to quality and health. Ideal for all age groups, KP products are a delightful way to enjoy great taste while taking care of your well-being.`
     },
     {
@@ -76,7 +76,7 @@ export default function Testimonial() {
     >
       <CarouselContent>
         {testimonials.map((items, index) => (
-          <CarouselItem key={index} className="md:basis-1/3 h-[580px] md:h-[480px]">
+          <CarouselItem key={index} className="md:basis-1/3 h-[550px] md:h-[480px]">
 
             <TestimonialCard data={items} />
 
@@ -93,15 +93,15 @@ export default function Testimonial() {
 
   {/* indicator-web */}
   <div className="hidden md:block md:py-2 md:text-center md:text-sm">
-      {testimonials.map((_, index) => (
-          index % 3 === 0 && (
-              <button
-                  key={index}
-                  className={`md:h-2 md:w-2 md:rounded-full md:cursor-default md:ml-2 ${Math.floor((current - 1) / 3) === Math.floor(index / 3) ? "md:bg-accent" : "md:bg-gray-200"}`}
-              />
-          )
-      ))}
-  </div>
+  {[0, 1, 2].map((index) => (
+    <button
+      key={index}
+      className={`md:h-2 md:w-2 md:rounded-full md:cursor-default md:ml-2 ${
+        index === Math.min(Math.floor((current - 1) / 3), 2) ? "md:bg-accent" : "md:bg-gray-200"
+      }`}
+    />
+  ))}
+</div>
 
     {/* indicator-mobile */}
 
