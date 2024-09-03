@@ -6,14 +6,14 @@ export default function MovingText() {
   return (
     <div className="bg-accent overflow-hidden whitespace-nowrap">
       <div className="inline-block animate-marquee">
-        {[...Array(20)].map((_, index) => (
+        {[...Array(30)].map((_, index) => (
           <Base key={index} className="inline-block">
             {text}
           </Base>
         ))}
       </div>
       <div className="inline-block animate-marquee2">
-        {[...Array(20)].map((_, index) => (
+        {[...Array(30)].map((_, index) => (
           <Base key={index} className="inline-block">
             {text}
           </Base>

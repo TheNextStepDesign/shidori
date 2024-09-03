@@ -42,7 +42,7 @@ export  function SocialContacts() {
             target="blank"
             className="cursor-pointer bg-opacity-30 backdrop-blur-lg shadow-lg bg-black p-2 rounded-full"
           >
-            <item.icon color={'#FBD71C'} width="30" height="31" />
+            <item.icon color={'#efe5b9'} width="30" height="31" />
           </a>)
         }
     </div>

@@ -12,12 +12,7 @@ import {
 import Body from "@/components/Body";
 
 const testimonials = [
-    {
-        name:"Manisha Shah",
-        img:"/images/landing/testimonial.webp",
-        designation:"CEO, Mom to be, Mumbai",
-        message:`llicitudin a libero. Mauris bibendum sit amet erat in rhoncus. Aenean at rhoncus lorem, ac mattis velit. Aliquam sed mattis dolor. Vestibulum ac urna a ex sagittis efficitur. Mauris consequat leo eu lacus pharetra, bibendum fermentum ante ultrices. Vestibulum nec fermentum neque. Nunc ut gravida velit. Nam lobortis turpis sit amet lacinia tincidunt.`
-    },
+    
     {
         name:"Shalaka Vivek Gokhale ",
         img:"/images/landing/testimonial2.webp",
@@ -30,6 +25,24 @@ const testimonials = [
         img:"/images/landing/testimonial3.webp",
         designation:"Mountaineer",
         message:`For 12 years of climbing in the Sahyadri and Himalayas, I never carried food from home, preferring local fare despite my family’s insistence. A few years ago, Kalpana Kaki urged me to try her Shidori ladoos. Reluctant at first, I was surprised by how delicious and energizing they were, filled with dry fruits and free from sugar. Now, they’re a must-have for my expeditions—and my entire family is hooked!`
+    },
+    {
+        name:"Rashmi Patil",
+        img:"/images/landing/testimonial4.jpeg",
+        designation:"",
+        message:`I am Rashmi Patil. While navigating the busy professional life in Mumbai, I found a reference to Kalpana Patil from Kolhapur when looking for something tasty and nutritious, and all my problems were solved. For the past two years, my family and I have been fans of Kalpana Tai’s dry fruit and Khapli wheat laddus. Heartfelt thanks to her for delivering excellent nutrition with great taste. May this service continue forever!`
+    },
+    {
+        name:"Saroj Shinde",
+        img:"/images/landing/testimonial5.jpeg",
+        designation:"",
+        message:`KP products are genuinely authentic and incredibly delicious. Made with the finest ingredients, they offer a perfect blend of taste and nutrition. Whether it’s their wholesome dry fruits or nutritious Khapli wheat laddus, each product reflects a commitment to quality and health. Ideal for all age groups, KP products are a delightful way to enjoy great taste while taking care of your well-being.`
+    },
+    {
+        name:"Dr. Vilas Parekh",
+        img:"/images/landing/testimonial6.jpeg",
+        designation:"MBBS, DHM, Pune",
+        message:`KP products have become a favorite in our household for their exceptional quality and flavor. Every item, from their fresh dry fruits to their nutritious snacks, is made with care and precision, ensuring a delightful taste with every bite. We trust KP for providing a healthy and tasty option that keeps our family energized and satisfied. Truly a perfect blend of tradition and wellness in every product!`
     }
     
   ]

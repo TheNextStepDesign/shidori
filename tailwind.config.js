@@ -17,7 +17,7 @@ module.exports = {
       colors:{
         brand:"#461F16",
         brandhover:"#291009",
-        accent:"#FBD71C",
+        accent:"#efe5b9",
         customgray:"#D7D7D7",
       },
       
@@ -25,8 +25,8 @@ module.exports = {
         sans: ['var(--font-poppins)'],
       },
       animation: {
-        marquee: 'marquee 90s linear infinite',
-        marquee2: 'marquee2 90s linear infinite',
+        marquee: 'marquee 140s linear infinite',
+        marquee2: 'marquee2 140s linear infinite',
       },
       keyframes: {
         marquee: {

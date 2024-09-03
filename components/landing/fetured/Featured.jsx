@@ -5,6 +5,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 
 import FeaturedCard from "./FeaturedCard";
@@ -12,30 +14,34 @@ import Body from "@/components/Body";
 
 const data = [
   {
-    title: "Healthy Ladoos",
+    title: "Khapli Wheat Laddoo",
     description: "Ghee, dry-fruits, jaggery and love!",
     image: "/images/landing/products/tumbnails/1.webp",
+    gallary:["/images/landing/products/tumbnails/1.webp","/images/landing/products/tumbnails/2.webp"],
     button: "View all >",
     ingredients:"Gond and Dates | Mixed Dry fruit | Khapli Wheat"
   },
   {
-    title: "Healthy Ladoos",
+    title: "Green Chilli Pickle",
     description: "Ghee, dry-fruits, jaggery and love!",
     image: "/images/landing/products/tumbnails/2.webp",
+    gallary:["/images/landing/products/tumbnails/1.webp","/images/landing/products/tumbnails/2.webp"],
     button: "View all >",
     ingredients:"Gond and Dates | Mixed Dry fruit | Khapli Wheat"
   },
   {
-    title: "Healthy Ladoos",
+    title: "7 Seeds Nutri-Bar",
     description: "Ghee, dry-fruits, jaggery and love!",
     image: "/images/landing/products/tumbnails/3.webp",
+    gallary:["/images/landing/products/tumbnails/1.webp","/images/landing/products/tumbnails/2.webp"],
     button: "View all >",
     ingredients:"Gond and Dates | Mixed Dry fruit | Khapli Wheat"
   },
   {
-    title: "Healthy Ladoos",
+    title: "Dry Fruits Laddoo",
     description: "Ghee, dry-fruits, jaggery and love!",
     image: "/images/landing/products/tumbnails/4.webp",
+    gallary:["/images/landing/products/tumbnails/1.webp","/images/landing/products/tumbnails/2.webp"],
     button: "View all >",
     ingredients:"Gond and Dates | Mixed Dry fruit | Khapli Wheat"
   },
@@ -65,7 +71,9 @@ export default function Featured() {
 
   return (
     <Body>
-      <Carousel setApi={setApi} plugins={[plugin.current]} className="w-full">
+      <Carousel setApi={setApi}
+      //  plugins={[plugin.current]} 
+       className="w-full">
         <CarouselContent>
           {data.map((items, index) => (
             <CarouselItem key={index}>
@@ -73,8 +81,8 @@ export default function Featured() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        {/* <CarouselPrevious /> */}
-        {/* <CarouselNext /> */}
+        <CarouselPrevious />
+        <CarouselNext />
       </Carousel>
       
       {/* indicator */}
