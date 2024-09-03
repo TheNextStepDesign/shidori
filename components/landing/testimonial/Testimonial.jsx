@@ -29,7 +29,7 @@ const testimonials = [
     {
         name:"Rashmi Patil",
         img:"/images/landing/testimonial4.jpeg",
-        designation:"",
+        designation:"Business Women",
         message:`I am Rashmi Patil. While navigating the busy professional life in Mumbai, I found a reference to Kalpana Patil from Kolhapur when looking for something tasty and nutritious, and all my problems were solved. For the past two years, my family and I have been fans of Kalpana Tai’s dry fruit and Khapli wheat laddus. Heartfelt thanks to her for delivering excellent nutrition with great taste. May this service continue forever!`
     },
     {

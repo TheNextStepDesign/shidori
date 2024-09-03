@@ -16,7 +16,7 @@ export default function ContactUs() {
         <div 
             className="bg-cover bg-center bg-no-repeat min-h-[85vh] relative "
             style={{ 
-                backgroundImage: "url('/images/landing/featured_img.png')",
+                backgroundImage: "url('/images/landing/contact_img.webp')",
             }}
             >
             <div className="absolute inset-0 bg-black bg-opacity-80"></div>
