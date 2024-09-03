@@ -40,7 +40,7 @@ const testimonials = [
     },
     {
         name:"Dr. Vilas Parekh",
-        img:"/images/landing/testimonial6.jpeg",
+        img:"/images/landing/testimonial7.jpeg",
         designation:"MBBS, DHM, Pune",
         message:`KP products have become a favorite in our household for their exceptional quality and flavor. Every item, from their fresh dry fruits to their nutritious snacks, is made with care and precision, ensuring a delightful taste with every bite. We trust KP for providing a healthy and tasty option that keeps our family energized and satisfied. Truly a perfect blend of tradition and wellness in every product!`
     }
