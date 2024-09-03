@@ -18,14 +18,10 @@ export default function StoryBottomHero() {
                     Our Story
                 </H2>
                 <Paragraph>
-                    Founded by Mrs. Kalpana Patil, a dedicated
-                    homemaker and mother, Shidori began as K.P. Foods. With a passion for cooking and a love for kitchen experiments, Mrs. Patil started selling her products after friends and family began requesting them more frequently. Having previously managed a feed factory for her father before marriage, she seized the opportunity to take her culinary skills to a commercial level.
+                Shidori started with Miss. Kalpana Patil, a homemaker with a passion for cooking and ensuring her children had nutritious, homemade food on the go. She began making wholesome laddus and bars to provide her kids with energy packed snacks for their busy days. The word “Shidori” reflects this tradition—a meal prepared for a journey; simple, nutritious, and long lasting.
                 </Paragraph>
                 <Paragraph>
-                    In a short time, through word-of-mouth publicity alone, she was shipping her products all over India and to local farmers markets. Mrs. Patil is very particular about the ingredients she uses and ensures the consistency of her products. Now, K.P.
-                    Foods has evolved into Shidori, so everyone can
-                    savor the taste of homemade goodness and
-                    nutrition all over the globe.
+                Originally known as K.P. Foods, the brand quickly grew as word of mouth spread the deliciousness of her creations. Mrs. Patil carefully selects the best quality ingredients to maintain the same high standards in every batch. Today, her son has joined her in this journey, aiming to take it a step further by sharing his mother's homemade goodness with people around the world.
                 </Paragraph>
             </VStacks>
 
