@@ -11,10 +11,10 @@ const items = [
   },
   {
     icon: WhatsAppIcon,
-    path: "https://wa.me/c/919822668020",
+    path: "https://wa.me/919822668020?text=Hello",
   } 
 ];
-//https://wa.me/919822668020?text=Hii,
+
 export  function Social() {
   return (
     <div className='hidden md:flex md:flex-row md:justify-end gap-8 lg:w-[274px] '>

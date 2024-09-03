@@ -3,7 +3,7 @@ import Link from "next/link"
 const items = [
     {
         name:"products",
-        href:"/"
+        href:"https://wa.me/c/919822668020"
     },
     {
         name:"about",
@@ -23,7 +23,7 @@ export const NavItemsWeb = () => {
             items.map((item,index) => {
                 return (
                     <div key={index} className="flex items-center gap-5" >
-                        <Link href={item.href} className="text-base font-light" >{item.name}</Link >
+                       {item.name === "products"?<a href="https://wa.me/c/919822668020" target="blank" className="text-base font-light" >{item.name}</a>:<Link href={item.href} className="text-base font-light" >{item.name}</Link >} 
                     </div>
                 )
             })

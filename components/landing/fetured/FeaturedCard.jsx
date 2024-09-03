@@ -1,5 +1,6 @@
 import { Base, H3 } from "@/components/typography/Typography";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function FeaturedCard({data}) {
     const {title,description,image,button,ingredients} = data
@@ -23,10 +24,11 @@ export default function FeaturedCard({data}) {
                         {ingredients}
                     </H3>
                     
-                    
+                    <a href="https://wa.me/c/919822668020" target="blank" >
                     <button className="bg-brand hover:bg-brandhover w-32  flex-shrink-1 py-2  rounded-xl text-white text-base font-light" >
                         {button}
                     </button>
+                    </a>
                     
 
                     

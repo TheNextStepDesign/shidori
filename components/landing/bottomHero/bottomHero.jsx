@@ -16,9 +16,11 @@ export default function BottomHero() {
                 <h2 className={'text-white text-h2'} >
                 Wholesome goodness now at your fingertips
                 </h2>
+                <a href="https://wa.me/c/919822668020" target="blank" >
                 <button className="bg-white hover:bg-brandhover hover:text-white text-black font-semibold  w-[140px] px-5 py-2.5 rounded-2xl" >
                     Shop Now
                 </button>
+                </a>
         </VStacks>  
     </div>
   )
