@@ -15,8 +15,11 @@ export default function HeroBanner() {
   
         <Image src="/images/landing/test3.jpg" alt="heroMob" width={390} height={550}     className="md:hidden  h-full w-full object-cover object-center" />
       </div>
-        <h1 className={'absolute top-[5%] left-[5%] md:top-[47%] md:left-[10%] text-accent text-h1 font-semibold md:p-2.5'} >
+        <h1 className={'hidden md:block absolute top-[5%] left-[5%] md:top-[47%] md:left-[10%] text-accent text-h1 font-semibold p-2.5'} >
           <span>Celebrate Ganpati guilt free</span> <br></br> with Shidori!
+        </h1>
+        <h1 className={'md:hidden absolute top-[5%] left-[5%] text-accent text-h1 font-semibold p-2.5'} >
+          Celebrate <br></br> Ganpati guilt free <br></br> with Shidori!
         </h1>
       </div>
     )
