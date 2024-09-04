@@ -33,7 +33,7 @@ const testimonials = [
         message:`I am Rashmi Patil. While navigating the busy professional life in Mumbai, I found a reference to Kalpana Patil from Kolhapur when looking for something tasty and nutritious, and all my problems were solved. For the past two years, my family and I have been fans of Kalpana Tai’s dry fruit and Khapli wheat laddus. Heartfelt thanks to her for delivering excellent nutrition with great taste. May this service continue forever!`
     },
     {
-        name:"Saroj Shinde",
+        name:"Dr. Saroj Shinde",
         img:"/images/landing/testimonial5.jpeg",
         designation:"Janani Hospital, Kolhapur",
         message:`KP products are genuinely authentic and incredibly delicious. Made with the finest ingredients, they offer a perfect blend of taste and nutrition. Whether it’s their wholesome dry fruits or nutritious Khapli wheat laddus, each product reflects a commitment to quality and health. Ideal for all age groups, KP products are a delightful way to enjoy great taste while taking care of your well-being.`

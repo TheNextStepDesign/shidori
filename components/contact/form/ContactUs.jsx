@@ -8,6 +8,7 @@ import emailIcon from './icons/emailIcon.svg';
 import pinIcon from './icons/pinIcon.svg';
 import Body from "@/components/Body";
 import { SocialContacts } from "@/components/navbar/Social";
+import Link from "next/link";
 
 
 export default function ContactUs() {
@@ -49,44 +50,58 @@ export default function ContactUs() {
 
 const data = [
     {
-        icon:callIcon,
-        info:"+91 98226 68020"
+        icon: callIcon,
+        info: "+91 98226 68020",
+        href: "tel:+919822668020"
     },
     {
-        icon:pinIcon,
-        info:"KP Food and Products. 2113. E Ward, Behind Akanksha appt.  Nimbalkar Colony. Kawla Naka. Kolhapur, MH 416004"
+        icon: pinIcon,
+        info: "KP Food and Products. 2113. E Ward, Behind Akanksha appt.  Nimbalkar Colony. Kawla Naka. Kolhapur, MH 416004"
     },
     {
-        icon:emailIcon,
-        info:"info@shidori.in"
+        icon: emailIcon,
+        info: "info@shidori.in",
+        href: "mailto:info@shidori.in"
     }
 ]
 
-function ContactInfoLabel(){
-   
-
+function ContactInfoLabel() {
     return (
-        <VStacks  className={'relative z-10 justify-around  md:h-[350px]  '} >
-            <h1 className="   md:pl-5 text-white text-h1 underline" >
+        <VStacks className={'relative z-10 justify-around md:h-[350px]'}>
+            <h1 className="md:pl-5 text-white text-h1 underline">
                 Contact Us
             </h1>
-            <VStacks className={'gap-5'} >
+            <VStacks className={'gap-5'}>
                 {
-                    data.map((item, index)=>(<Stack key={index} className={'gap-5'}  >
-                                <div className="bg-opacity-30 backdrop-blur-lg shadow-lg bg-black  p-2 w-fit   rounded-full" >
-                                    <Image src={item.icon} alt="icon"   />
-                                </div>
-                                <Paragraph className={'text-white max-w-[480px]'} >
-                                    {item.info}
-                                </Paragraph>
-                            </Stack>)
-                        )
+                    data.map((item, index) => (
+                        <Stack key={index} className={'gap-5'}>
+                            <div className="bg-opacity-30 backdrop-blur-lg shadow-lg bg-black p-2 w-fit rounded-full">
+                                {item.href ? (
+                                    <Link href={item.href}>
+                                        <Image src={item.icon} alt="icon" />
+                                    </Link>
+                                ) : (
+                                    <Image src={item.icon} alt="icon" />
+                                )}
+                            </div>
+                            <Paragraph className={'text-white max-w-[480px]'}>
+                                {item.href ? (
+                                    <Link href={item.href} className="hover:underline">
+                                        {item.info}
+                                    </Link>
+                                ) : (
+                                    item.info
+                                )}
+                            </Paragraph>
+                        </Stack>
+                    ))
                 }
             </VStacks>
-            <SocialContacts   />
+            <SocialContacts />
         </VStacks>
     )
 }
+
 
 
 const ContactForm = () => {
@@ -113,6 +128,13 @@ const ContactForm = () => {
     					type="email"
     					className="min-h-[48px] leading-[48px] bg-[#F2F6FD]  border border-transparent rounded-xl focus:outline-none focus:border focus:border-brand w-full px-5"
     					placeholder="Enter Email"
+    				/>
+    			</div>
+                <div className="mb-4">
+    				<input
+    					type="number"
+    					className="min-h-[48px] leading-[48px] bg-[#F2F6FD]  border border-transparent rounded-xl focus:outline-none focus:border focus:border-brand w-full px-5"
+    					placeholder="Enter Mobile Number"
     				/>
     			</div>
     			<div className="mb-4">
