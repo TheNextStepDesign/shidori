@@ -11,4 +11,8 @@ body {
   @apply bg-brand
 }
 
+#main-content {
+  transition: opacity 0.3s ease-in-out;
+}
+
 

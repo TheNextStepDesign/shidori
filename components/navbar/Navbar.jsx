@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import HambergerIcon from './icons/hamberger.svg';
 import closeIcon from './icons/close.svg';
 import { usePathname } from 'next/navigation'
@@ -15,6 +15,7 @@ import Headroom from 'react-headroom';
 
 export default function Navbar() {
   const [toggle, setToggle] = useState(false)
+  const navbarRef = useRef(null);
   const pathname = usePathname()
   const [pinned, setPinned] = useState(true)
 
@@ -37,8 +38,35 @@ export default function Navbar() {
   },[pathname])
 
 
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (navbarRef.current && !navbarRef.current.contains(event.target) && toggle) {
+        setToggle(false);
+      }
+    }
+  
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [toggle]);
+
+  useEffect(() => {
+    const mainContent = document.getElementById('main-content');
+    if (mainContent) {
+      if (toggle) {
+        mainContent.style.opacity = '0.5';
+        mainContent.style.pointerEvents = 'none';
+      } else {
+        mainContent.style.opacity = '1';
+        mainContent.style.pointerEvents = 'auto';
+      }
+    }
+  }, [toggle]);
+
+
   return (
-  <div className='relative z-40' >
+  <div className='relative z-40' ref={navbarRef} >
 
   <MovingText/>
   <Headroom  onPin={handlePin} onUnpin={handleUnpin}>
@@ -57,16 +85,15 @@ export default function Navbar() {
       </div>
 
       <div 
-        className={`block md:hidden w-full  bg-accent backdrop-blur-lg opacity-90 shadow-lg left-0 text-brand absolute 
-          overflow-hidden transition-all duration-300 ease-in-out 
+        className={`block md:hidden w-full bg-accent backdrop-blur-lg opacity-90 shadow-lg left-0 text-brand absolute 
+          overflow-hidden transition-all duration-300 ease-in-out z-40
           origin-top ${toggle ? 'max-h-screen' : 'max-h-0'}`}
       >
-        
-        <NavItemsMob/>
-        
-      </div>
+      <NavItemsMob/>
+    </div>
     </div>
     </Headroom>
+    
     </div>
   )
 }

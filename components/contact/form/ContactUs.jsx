@@ -9,6 +9,7 @@ import pinIcon from './icons/pinIcon.svg';
 import Body from "@/components/Body";
 import { SocialContacts } from "@/components/navbar/Social";
 import Link from "next/link";
+import { useState } from "react";
 
 
 export default function ContactUs() {
@@ -61,7 +62,7 @@ const data = [
     {
         icon: emailIcon,
         info: "info@shidori.in",
-        href: "mailto:info@shidori.in"
+        href: "mailto:info@shidori.in?subject=Website%20Inquiry%20Regarding."
     }
 ]
 
@@ -80,7 +81,7 @@ function ContactInfoLabel() {
                                     <Link href={item.href}>
                                         <Image src={item.icon} alt="icon" />
                                     </Link>
-                                ) : (
+                                ) : ( 
                                     <Image src={item.icon} alt="icon" />
                                 )}
                             </div>
@@ -106,33 +107,83 @@ function ContactInfoLabel() {
 
 const ContactForm = () => {
 	
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        mobile: '',
+        message: ''
+      });
+    
+      const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+       
+      };
 
-	const handleSubmit = (event) => {
-		event.preventDefault();
+      
+    
+      const handleSubmit = async (event) => {
+        event.preventDefault();
+    
+        try {
+          const response = await fetch('/api/send', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          });
+    
+          if (response.ok) {
+            alert('Email sent successfully!');
+            setFormData({ name: '', email: '', mobile: '', message: '' });
+          } else {
+            console.error('API Error:', data.error);
+            alert(`Failed to send email: ${data.error}`);
+          }
+        } catch (error) {
+            console.error('Fetch Error:', error);
+            alert('An error occurred while sending the email. Please try again.');
+          }
+      };
+      
 
-		
-	};
+    //   const handleSubmit =  (event) => {
+        
+    //     console.log(formData, 'tesr')
+    //   }
 
 	return (
 		<div className="p-5 relative z-10 w-full md:w-[550px] bg-opacity-30 backdrop-blur-lg shadow-lg bg-black rounded-xl" >
 		    <form className=""  onSubmit={handleSubmit}>
     			<div className="mb-4">
     				<input
+                        required
     					type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
     					className="min-h-[48px] leading-[48px] bg-[#F2F6FD]  border border-transparent rounded-xl focus:outline-none focus:border focus:border-brand w-full px-5"
     					placeholder="Enter Name"
     				/>
     			</div>
     			<div className="mb-4">
     				<input
+                        required
     					type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
     					className="min-h-[48px] leading-[48px] bg-[#F2F6FD]  border border-transparent rounded-xl focus:outline-none focus:border focus:border-brand w-full px-5"
     					placeholder="Enter Email"
     				/>
     			</div>
                 <div className="mb-4">
     				<input
+                        required
     					type="number"
+                        name="mobile"
+                        value={formData.mobile}
+                        onChange={handleChange}
     					className="min-h-[48px] leading-[48px] bg-[#F2F6FD]  border border-transparent rounded-xl focus:outline-none focus:border focus:border-brand w-full px-5"
     					placeholder="Enter Mobile Number"
     				/>
@@ -140,6 +191,9 @@ const ContactForm = () => {
     			<div className="mb-4">
     				<textarea
     					name="message"
+                        required
+                        value={formData.message}
+                        onChange={handleChange}
     					className="min-h-[48px] leading-[48px] bg-[#F2F6FD]  border border-transparent rounded-xl focus:outline-none focus:border focus:border-brand w-full px-5"
     					placeholder="Enter Message"
     					rows="4"

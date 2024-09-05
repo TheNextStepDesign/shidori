@@ -12,14 +12,7 @@ import {
 import Body from "@/components/Body";
 
 const testimonials = [
-    
-    {
-        name:"Shalaka Vivek Gokhale ",
-        img:"/images/landing/testimonial2.webp",
-        designation:"Co-Founder and Director Propmates international Pvt Ltd, Pune",
-        message:`Shidori name itself talks a lot.<br/><br/>I am regular customer of multigrain ladu’s they are very delicious , highly nutritious with just the right amount of sweetness (no artificial sweetener). And made out of pure Ghee.<br/><br/>Packing also really nice ..😊😊`
-       
-    },
+ 
     {
         name:"Khushi Kamboj",
         img:"/images/landing/testimonial3.webp",
