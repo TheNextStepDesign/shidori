@@ -55,7 +55,7 @@ export default function Navbar() {
     const mainContent = document.getElementById('main-content');
     if (mainContent) {
       if (toggle) {
-        mainContent.style.opacity = '0.5';
+        mainContent.style.opacity = '0.3';
         mainContent.style.pointerEvents = 'none';
       } else {
         mainContent.style.opacity = '1';

@@ -14,7 +14,7 @@ import Body from "@/components/Body";
 
 const data = [
   {
-    
+    name:"Nutri-Bar",
     gallary:["/images/landing/products/nutribar/1.webp","/images/landing/products/nutribar/2.webp"],
     singleData:[
       {
@@ -30,7 +30,7 @@ const data = [
     
   },
   {
-    
+    name:"Laddoo",
     gallary:["/images/landing/products/laddoos/1.webp","/images/landing/products/laddoos/2.webp","/images/landing/products/laddoos/3.webp"],
     singleData:[
       {
@@ -50,7 +50,7 @@ const data = [
     
   },
   {
-    
+    name:"Pickle",
     gallary:["/images/landing/products/pickles/1.webp","/images/landing/products/pickles/2.webp","/images/landing/products/pickles/3.webp","/images/landing/products/pickles/4.webp","/images/landing/products/pickles/5.webp"],
     singleData:[
       {

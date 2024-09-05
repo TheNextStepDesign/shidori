@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 
-export default function FeaturedImgCarousel({gallary,setIndex}) {
+export default function FeaturedImgCarousel({gallary,setIndex,name}) {
   const [api, setApi] = React.useState();
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);
@@ -39,7 +39,7 @@ export default function FeaturedImgCarousel({gallary,setIndex}) {
     );
 
   return (
-    <div className="w-full  md:w-1/2">
+    <div className="w-full  md:w-1/2 relative">
         <Carousel 
         plugins={[plugin.current]} 
         setApi={setApi}
@@ -56,6 +56,7 @@ export default function FeaturedImgCarousel({gallary,setIndex}) {
         {/* <CarouselPrevious /> */}
         {/* <CarouselNext /> */}
       </Carousel>
+      <p  className={'text-paragraph absolute top-5 right-5 bg-accent p-2 rounded-xl font-semibold  md:hidden'} >{name}</p>
     </div>
   )
 }
