@@ -10,7 +10,9 @@ export default function StoryBottomHero() {
         <Stack className={'md:flex-row-reverse bg-white p-2.5 gap-5  md:p-5  md:justify-between md:items-center rounded-xl md:rounded-2xl'} >
 
             <div className='w-full md:max-w-[650px] h-[350px] md:h-[530px] lg:h-[525px]  rounded-xl' >
-            <Image src={'/images/about/ourStory.JPG'} alt="ourStory" width={600} height={400} className="w-full h-full object-cover"/>
+              {/* temparory dismiss */}
+              {/* <Image src={'/images/about/ourStory.JPG'} alt="ourStory" width={600} height={400} className="w-full h-full object-cover"/> */}
+              <Image src={'/images/about/temp.png'} alt="ourStory" width={600} height={400} className="w-full h-full object-cover"/>
             </div>
 
             <VStacks className={'w-full md:max-w-[500px]'} >
