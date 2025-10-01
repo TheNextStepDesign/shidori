@@ -2,15 +2,15 @@ import Link from "next/link"
 
 const items = [
     {
-        name:"products",
+        name:"Products",
         href:"https://wa.me/c/919822668020"
     },
     {
-        name:"about",
+        name:"About",
         href:"/about"
     },
     {
-        name:"contact us",
+        name:"Contact us",
         href:"/contact"
     }
 ]
