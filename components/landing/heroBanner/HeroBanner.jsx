@@ -85,7 +85,7 @@ export default function HeroBanner() {
                       {slide.Heading}
                     </h2>
                     <p
-                      className={`text-center text-lg md:text-3xl mt-2 font-light drop-shadow ${slide.subHeadingColor} font-ztmoto tracking-wider`}
+                      className={`text-center text-lg md:text-3xl mt-1 font-light drop-shadow ${slide.subHeadingColor} font-ztmoto tracking-wider`}
                     >
                       {slide.subHeading}
                     </p>
