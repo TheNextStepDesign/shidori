@@ -1,6 +1,6 @@
 import Navbar from '@/components/navbar/Navbar';
 import './globals.css'
-import { Poppins } from 'next/font/google'
+import { Poppins, Playfair_Display } from 'next/font/google'
 import Footer from '@/components/footer/Footer';
 
 

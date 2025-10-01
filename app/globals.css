@@ -3,7 +3,13 @@
 @tailwind utilities;
 
 
-
+@font-face {
+  font-family: 'ZTMoto';
+  src: url('/fonts/zt-moto.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 
 body {

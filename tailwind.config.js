@@ -23,6 +23,7 @@ module.exports = {
       
       fontFamily: {
         sans: ['var(--font-poppins)'],
+        ztmoto: ['ZTMoto', 'serif'],
       },
       animation: {
         marquee: 'marquee 140s linear infinite',

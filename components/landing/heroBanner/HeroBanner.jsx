@@ -4,11 +4,17 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import * as React from "react";
 import Autoplay from "embla-carousel-autoplay";
+import {  Cormorant } from "next/font/google";
+
+
+const cormorant = Cormorant({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+});
+
 
 const sliderData = [
   {
@@ -24,31 +30,30 @@ const sliderData = [
     src: "/images/landing/shidori-hero-2.png",
     headingColor: "text-[#461F16]",
     subHeadingColor: "text-[#461F16]",
-    
   },
 ];
 
 export default function HeroBanner() {
-    const [api, setApi] = React.useState();
-    const [current, setCurrent] = React.useState(0);
-    const [count, setCount] = React.useState(0);
-  
-    React.useEffect(() => {
-      if (!api) {
-        return;
-      }
-  
-      setCount(api.scrollSnapList().length);
+  const [api, setApi] = React.useState();
+  const [current, setCurrent] = React.useState(0);
+  const [count, setCount] = React.useState(0);
+
+  React.useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
       setCurrent(api.selectedScrollSnap() + 1);
-  
-      api.on("select", () => {
-        setCurrent(api.selectedScrollSnap() + 1);
-      });
-    }, [api]);
-  
-    const plugin = React.useRef(
-      Autoplay({ delay: 5000, stopOnInteraction: false })
-    );
+    });
+  }, [api]);
+
+  const plugin = React.useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: false })
+  );
 
   return (
     <div className="relative h-[50vh] md:h-screen flex items-center justify-center bg-[#e7d1b2]">
@@ -58,7 +63,7 @@ export default function HeroBanner() {
           loop: true,
         }}
         setApi={setApi}
-       plugins={[plugin.current]}
+        plugins={[plugin.current]}
       >
         <CarouselContent className=" h-[50vh] md:h-full">
           {sliderData.map((slide, idx) => (
@@ -75,12 +80,12 @@ export default function HeroBanner() {
                   {/* Text at top center */}
                   <div className="absolute top-0 left-0 w-full flex flex-col items-center pt-12 md:pt-20 z-10">
                     <h2
-                      className={`text-center text-2xl md:text-5xl font-serif font-semibold drop-shadow-lg ${slide.headingColor}`}
+                      className={`text-center text-2xl md:text-5xl font-semibold drop-shadow-lg ${slide.headingColor} font-ztmoto tracking-widest `}
                     >
                       {slide.Heading}
                     </h2>
                     <p
-                      className={`text-center text-lg md:text-3xl mt-2 font-light drop-shadow ${slide.subHeadingColor}`}
+                      className={`text-center text-lg md:text-3xl mt-2 font-light drop-shadow ${slide.subHeadingColor} font-ztmoto tracking-wider`}
                     >
                       {slide.subHeading}
                     </p>
@@ -92,8 +97,6 @@ export default function HeroBanner() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        {/* <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10" />
-        <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10" /> */}
       </Carousel>
       {/* Indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-20">
