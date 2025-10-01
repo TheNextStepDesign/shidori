@@ -78,9 +78,9 @@ export default function HeroBanner() {
                     priority={idx === 0}
                   />
                   {/* Text at top center */}
-                  <div className="absolute top-0 left-0 w-full flex flex-col items-center pt-12 md:pt-20 z-10">
+                  <div className="absolute top-0 left-0   w-full flex flex-col items-center pt-12 md:pt-20 z-10">
                     <h2
-                      className={`text-center text-2xl md:text-5xl font-semibold drop-shadow-lg ${slide.headingColor} font-ztmoto tracking-widest `}
+                      className={`text-center px-4 text-2xl md:text-5xl font-semibold drop-shadow-lg ${slide.headingColor} font-ztmoto tracking-widest `}
                     >
                       {slide.Heading}
                     </h2>
