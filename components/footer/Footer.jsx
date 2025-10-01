@@ -15,7 +15,7 @@ export default function Footer() {
         </Stack>
         <Stack className={'md:justify-between justify-start p-5 gap-5 md:gap-0 '} >
             <Base>
-            copyright 2024, KP Foods. All rights reserved
+            copyright 2025, KP Foods. All rights reserved
             </Base>
             <SocialFooter/>
         </Stack>
