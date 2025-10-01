@@ -51,16 +51,16 @@ export default function HeroBanner() {
     );
 
   return (
-    <div className="relative h-screen flex items-center justify-center bg-[#e7d1b2]">
+    <div className="relative h-[50vh] md:h-screen flex items-center justify-center bg-[#e7d1b2]">
       <Carousel
-        className="w-full h-full"
+        className="w-full h-[50vh] md:h-full"
         opts={{
           loop: true,
         }}
         setApi={setApi}
        plugins={[plugin.current]}
       >
-        <CarouselContent className="h-full">
+        <CarouselContent className=" h-[50vh] md:h-full">
           {sliderData.map((slide, idx) => (
             <CarouselItem key={idx} className="flex justify-center items-center h-full">
               <div className="w-full h-full flex flex-col items-center">
